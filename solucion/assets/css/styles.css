@@ -45,13 +45,13 @@ body {
 
 header {
     min-height: 30vh;
-    margin: 0 5% 0 5%;
+    padding: 0 5%;
 }
 
 header .title {
     display: flex;
     padding: 6% 0 5% 0;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -60,7 +60,7 @@ header .title .cart-icon {
 }
 
 header .title .cart-icon img {
-    width: 95%;
+    width: 100%;
 }
 
 header .title h1 {
@@ -75,7 +75,6 @@ header .navbar {
 }
 
 header .navbar a {
-    padding: 0 2%;
     text-decoration: none;
     color: var(--gray);
     font-weight: 300;
@@ -88,29 +87,26 @@ header .search {
 
 header .search input {
     width: 70%;
-    padding: 3%;
-    margin: 4%;
+    padding: 1rem;
+    margin: 5%;
     border-style: solid;
-    border-width: 0.1rem;
+    border-width: 1px;
     border-radius: 0.6rem;
     font-family: 'Poppins', sans-serif;
     box-shadow: 0 2px 4px var(--gray);
 }
 
-
 .products {
     min-height: calc(100vh - 30vh);
     display: grid;
-    justify-items: center;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    column-gap: 1rem;
+    row-gap: 3rem;
     padding: 0 1rem;
 }
 
-
 .products .product-card {
     width: 100%;
-    margin: 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -121,40 +117,45 @@ header .search input {
     border-radius: 0.8rem;
 }
 
-.products .product-card .product-card-info figure {
+.products .product-card .image-container {
     width: 100%;
 }
 
-.products .product-card .product-card-info figure img {
+.products .product-card .image-container img {
     height: 20vh;
     width: 100%;
     object-fit: cover;
     border-radius: 0.8rem 0.8rem 0 0;
 }
 
-.products .product-card .product-card-info section {
+.products .product-card .product-card-info .name {
     display: flex;
     justify-content: space-between;
-    margin: 0 4%;
+    padding: 0 0.5rem;
 }
 
-.products .product-card .product-card-info section h2 {
+.products .product-card .product-card-info .description {
+    padding: 0 0.5rem 0.75rem 0.5rem;
+}
+
+.products .product-card-info .name h2,
+.products .product-card-info .name .price {
     font-size: 1rem;
     color: var(--red-light);
 }
 
-.products .product-card .product-card-info section p {
+
+.products .product-card .product-card-info .description p {
     font-size: 0.75rem;
-    margin-bottom: 2%;
 }
 
 .products .product-card .product-card-button button {
     width: 100%;
-    padding: 5%;
+    padding: 0.7rem;
     font-size: 0.9rem;
-    border: 0.1rem;
+    border: none;
     border-radius: 0.5rem;
-    margin-top: 4%;
+    margin-top: 0.75rem;
     font-family: 'Poppins';
     background-color: var(--red-light);
     color: var(--white);
@@ -167,6 +168,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
 }
 
 footer p {
@@ -186,7 +188,6 @@ footer p {
         width: 55%;
         font-size: 2rem;
         font-weight: 400;
-
     }
 
     header .title .cart-icon {
@@ -203,16 +204,20 @@ footer p {
         justify-content: center;
     }
 
+    header .navbar a {
+        padding: 0 0.75rem;
+    }
+
     header .search input {
         width: 60%;
-        padding: 1.5%;
         margin: 1% 0 2% 0;
         border-radius: 0.8rem;
     }
 
     .products {
         grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
+        column-gap: 2rem;
+        row-gap: 3rem;
     }
 
 }
@@ -236,14 +241,12 @@ footer p {
 
     header .search input {
         width: 50%;
-        padding: 1%;
         margin: 0% 0 2% 0;
     }
 
     .products {
         grid-template-columns: repeat(5, 1fr);
-        gap: 2rem;
-        padding: .5rem 1.2rem;
+        padding: 0.5rem 1.2rem;
         max-width: 1366px;
         margin: auto;
     }
