@@ -60,7 +60,7 @@ header .title .cart-icon {
 }
 
 header .title .cart-icon img {
-    width: 100%;
+    width: 30px;
 }
 
 header .title h1 {
@@ -179,25 +179,25 @@ footer p {
 @media screen and (min-width: 768px) {
     header .title {
         padding: 4% 0 2% 0;
-        justify-content: center
+        justify-content: center;
+        position: relative
     }
 
     header .title h1 {
-        display: flex;
-        justify-content: flex-end;
-        width: 55%;
         font-size: 2rem;
         font-weight: 400;
     }
 
     header .title .cart-icon {
-        width: 45%;
+        width: 35%;
         display: flex;
         justify-content: flex-end;
+        position: absolute;
+        right: 0;
     }
 
     header .title .cart-icon img {
-        width: 12%;
+        width: 35px;
     }
 
     header .navbar {
@@ -236,7 +236,7 @@ footer p {
     }
 
     header .title .cart-icon img {
-        width: 8%;
+        width: 40px;
     }
 
     header .search input {
